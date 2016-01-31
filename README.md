@@ -2,10 +2,6 @@
 Project for Getting and Cleaning Data | Coursera | Johns Hopkins
 Lisa Nelson 
 
-
-
-***** DRAFT - PLEASE DO NOT GRADE **********************
-
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
 Getting and Cleaning Data Course Project
