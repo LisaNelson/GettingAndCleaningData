@@ -1,10 +1,9 @@
-# GettingAndCleaningData
+#Getting And Cleaning Data
 #Project for Getting and Cleaning Data | Coursera | Johns Hopkins
 #Lisa Nelson 
 
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
-Getting and Cleaning Data Course Project
 ==================================================================
 #Based on data and documentation by: 
   Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
@@ -32,9 +31,10 @@ Getting and Cleaning Data Course Project
 	tidyset2.txt   - tidy data set with average mean and std values data in wide format
 	run_analysis.R - code to create the data set  
 
-#Supporting Fles:
+#Supporting Files:
   activity_labels.txt
   features.txt  
+  
 =====================================================================
 #How to read tidy data file: 
   file_path <- "./tidyset2.txt"
