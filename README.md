@@ -1,12 +1,11 @@
 #Getting And Cleaning Data
-#Project for Getting and Cleaning Data | Coursera | Johns Hopkins
-#Lisa Nelson 
+##Project for Getting and Cleaning Data | Coursera | Johns Hopkins
+##Lisa Nelson 
 
 ==================================================================
-Human Activity Recognition Using Smartphones Dataset
-==================================================================
-#Based on data and documentation by: 
+# Based on data and documentation by: 
   Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+  Human Activity Recognition Using Smartphones Dataset
   Smartlab - Non Linear Complex Systems Laboratory
   DITEN - Università degli Studi di Genova.
   Via Opera Pia 11A, I-16145, Genoa, Italy.
@@ -19,29 +18,29 @@ Human Activity Recognition Using Smartphones Dataset
    The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
 =================================================================
-#Other Resources:
+##Other Resources:
   Thoughtful Bloke: 	https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/
   "Tidy Data" paper: 	http://vita.had.co.nz/papers/tidy-data.pdf
   Code Book info: 		https://github.com/jtleek/datasharing
    
 =================================================================
-#Assignment Files:
+##Assignment Files:
 	README.md      - this documentation
 	CodeBook.txt   - Code book for the tidy data file
 	tidyset2.txt   - tidy data set with average mean and std values data in wide format
 	run_analysis.R - code to create the data set  
 
-#Supporting Files:
+##Supporting Files:
   activity_labels.txt
   features.txt  
   
 =====================================================================
-#How to read tidy data file: 
+##How to read tidy data file: 
   file_path <- "./tidyset2.txt"
   data <- read.table(file_path, header = TRUE) 
   View(data)
 ======================================================================
-#Script description 
+##Script description 
 The code is run with a single script, run_analysis.R.  Which performs the following steps:
 
     1.  Merges the training and the test sets to create one data set.
