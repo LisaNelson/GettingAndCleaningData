@@ -52,13 +52,14 @@ tidy_set1 = select(combined_data, Activity, SubjectID, matches("(mean|std)"))
 write.table(tidy_set1, file="./tidyset.txt", row.names=FALSE)
 
 #Create averages for each variable by activity and subject.  Use wide format.  
-ts2 <- as.data.table(tidy_set1)
-ts3 <- melt(ts2, id=(1:2), measure=(3:72))
-ts4 <- dcast(ts3, SubjectID+Activity  ~ variable, mean)
+ts2 <- as.data.table(tidy_set1) %>%
+       melt(id=(1:2), measure=(3:72))  %>%
+       dcast(SubjectID+Activity  ~ variable, mean)
 
 #Substitute Activity numbers with names from activity_labels.txt
 activitymap = read.table("./UCI HAR Dataset/activity_labels.txt", sep="", col.names = c("Activity", "ActivityName"))
-tidy_set2 <- merge(ts4, activitymap, by.x="Activity" , by.y="Activity", all=TRUE )
+tidy_set2 <- merge(ts2, activitymap, by.x="Activity" , by.y="Activity", all=TRUE ) %>%
+             select (SubjectID, ActivityName, timeBodyAccmeanX:FFTBodyAccMagmeanFreq )
 
 #Write out a text file with second tidy data set in wide format
 write.table(tidy_set2, file="./tidyset2.txt", row.names=FALSE)
